@@ -1,15 +1,16 @@
 $(document).ready(function () {
     console.log("ayo jquery");
+    $(".testcontent").text("asd");
     var userProfile;
     var content = $('.content');
     var loadingSpinner = $('#loading');
     content.css('display', 'block');
     loadingSpinner.css('display', 'none');
-  
+
     var webAuth = new auth0.WebAuth({
       domain: "uclaproject1.auth0.com",
       clientID: "4Bjujz5-ymqWthTpaIHyNOkMd668-mvD",
-      redirectUri: "https://davidfunk13.github.io/uclagroupproject1/app.html",
+      redirectUri: "https://yoelchristian.github.io/yoelchristian/uclagroupproject1/app.html",
       audience: 'https://' + "uclaproject1.auth0.com" + '/userinfo',
       responseType: 'token id_token',
       scope: 'openid'
@@ -113,8 +114,13 @@ $(document).ready(function () {
       $('#profile-view .nickname').text(userProfile.nickname);
       $('#profile-view .full-profile').text(JSON.stringify(userProfile, null, 2));
       $('#profile-view img').attr('src', userProfile.picture);
+      $(".testcontent").text(userProfile.nickname);
+      $(".testcontent").text("asd");
+      console.log(userProfile.nickname);
     }
-  
+    
+
+    getProfile();
     function handleAuthentication() {
       webAuth.parseHash(function(err, authResult) {
         if (authResult && authResult.accessToken && authResult.idToken) {
