@@ -5,36 +5,96 @@
     <title>GetHi!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <!-- Jumbotron -->
-    <div id="style-jumbotron" class="jumbotron jumbotron-fluid text-center" >
+    <!-- Welcome Page |start-->
+    <div id="welcome-page" class="text-center" >
         <img class="brand-logo" src="assets/image/weed-logo.png" alt="weed">
         <div class="container">
-            <h1>Get Hi!</h1> 
-            <p>Your first step in getting effectively high!</p> 
-            <p>
-                <button type="button" class="btn btn-success initial-button" data-toggle="modal" data-target="#login-modal">
-                    Log in
+            <h1><span class="welcome-message hidden">Welcome to </span><span class="get-hi">GetHi!</span></h1> 
+            <!-- Carousel |start-->
+            <div class="carousel-container hidden">
+            <div id="carouselNews" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselNews" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselNews" data-slide-to="1"></li>
+                  <li data-target="#carouselNews" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="news-image" src="assets/image/news-1.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><a class="news-link" target="_blank" 
+                            href="http://www.latimes.com/politics/la-pol-ca-pot-sales-statewide-cities-refuse-20171215-story.html">
+                            California begins licensing recreational marijuana sales next month. 
+                            But most won't see pot shops in their city anytime soon</a></h5>
+                        <p>By PATRICK MCGREEVY
+                            DEC 15, 2017 | 9:05 AM
+                            | SACRAMENTO | LA TIMES</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="news-image" src="assets/image/news-2.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><a class="news-link" target="_blank" 
+                            href="http://www.sacbee.com/news/state/california/california-weed/article194167914.html">
+                            Which city leads the state in number of retail pot shops? (Hint: It’s not L.A. or S.F.)</a></h5>
+                        <p>By BRAD BRANAN
+                            January 11, 2018 | 10:10 AM
+                            | SACBEE.COM</p>
+                        </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="news-image" src="assets/image/news-3.jpeg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><a class="news-link" target="_blank" 
+                            href="http://www.sacbee.com/news/state/california/california-weed/article191149659.html">
+                            Cannabis 101: Here's what you need to know about recreational marijuana</a></h5>
+                        <p>By PAUL KITAGAKI Jr. / BRAD BRANAN
+                            DEC 25, 2017 | SACBEE.COM</p>
+                            
+                        </div>                  
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselNews" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselNews" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+            </div>
+            <!-- End -->
+            <div class="button-grouping-welcome-page">
+                <p>Your first step in getting effectively high!</p> 
+                <p>
+                    <button type="button" class="btn btn-success initial-button" data-toggle="modal" data-target="#login-modal">
+                        Log in
+                    </button>
+                </p>
+                <p>Don't have a GetHi! account? Sign up and get the most recent news from us!</p>
+                <!-- Modal Button for Age/Experience Confirmation -->        
+                <!-- Button to Open the Modal -->
+                <button type="button" class="btn btn-warning initial-button" data-toggle="modal" data-target="#signup-modal">
+                Sign Up!
                 </button>
-            </p>
-            <p>Don't have a GetHi! account? Sign up and get the most recent news from us!</p>
+                <span>or enter as a </span>
+                <button type="button" class="btn btn-dark initial-button" data-toggle="modal" data-target="#age-confirmation">
+                Guest
+                </button>
+            </div>
         </div>
-        <!-- Modal Button for Age/Experience Confirmation -->        
-        <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-warning initial-button" data-toggle="modal" data-target="#signup-modal">
-        Sign Up!
-        </button>
-        <span>or enter as a </span>
-        <button type="button" class="btn btn-dark initial-button" data-toggle="modal" data-target="#age-confirmation">
-        Guest
-        </button>
+        
+    </div>
+    <!-- End -->
         <!-- The Modal [Login Modal] -->
         <div class="modal fade" id="login-modal">
         <div class="modal-dialog">
@@ -118,7 +178,6 @@
           </div>
         </div>
         </div>
-    </div>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-light sticky-top">
         <div class="container">
@@ -237,10 +296,10 @@
 
     <script type = "text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type = "text/javascript" src = "assets/javascript/app.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
     $("#remove-jumbotron").on("click", function(){
-        $("#style-jumbotron").addClass("hidden");
+        $("#welcome-page").addClass("hidden");
     });
 
     $(document).on("click", ".flavor-list-item",function(){
@@ -251,6 +310,24 @@
         $("#collapseTwo").collapse("toggle");
     });
     
+    setTimeout(function(){
+        $(".brand-logo").addClass("slow-fade-out");
+        setTimeout(function(){
+            $(".brand-logo").addClass("hidden");
+            $(".carousel-container").removeClass("hidden");
+            $(".carousel-container").addClass("opacity-zero");
+            setTimeout(function(){
+                $(".carousel-container").addClass("slow-fade-in");
+            }, 1500);          
+            $(".welcome-message").removeClass("hidden"); 
+            $(".welcome-message").addClass("opacity-zero"); 
+            setTimeout(function(){
+                $(".welcome-message").addClass("slow-fade-in");
+            }, 1500); 
+        }, 1500);
+        
+    }, 1000);
+
     </script>
 </body>
 
